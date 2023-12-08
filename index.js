@@ -66,7 +66,13 @@ app.listen(3000, () => {
 //When you run your Node.js application, this callback will be invoked once the server is up and running.
 
 
-const routes = require('./routes/routes');
+// const routes = require('./routes/routes');
+//importing a module that defines routes for an Express.js application.
+//require('./routes/routes'): This uses the require function in Node.js to import the module located at the relative path ./routes/routes.
 
+// app.use('/api', routes)
+//app.use() is a method in Express.js used to mount middleware or sub-apps on a specified path.
+///api is the path prefix, meaning that the routes defined in the routes module will only be applied if the URL starts with '/api'.
+
+const routes = require('./routes/empolyeeroutes');
 app.use('/api', routes)
-
